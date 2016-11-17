@@ -1,0 +1,437 @@
+/*NORMALIZE*/
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/*END NORMALIZE*/
+
+
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 1500px;
+}
+
+
+.navigation{
+    list-style: none;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,.4);
+    background-size: contain;
+    border-radius: 6px;
+}
+
+label[for="nav-trigger"]:after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 22px;
+    width: 15px;
+    height: 2.5px;
+    background: #fff;
+    box-shadow: 
+    0 0.3em 0 0 #fff,
+    0 0.6em 0 0 #fff;
+}
+
+.nav-trigger:checked{
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+.nav-trigger:checked + label {
+    left: 215px;  
+}
+
+.nav-trigger:checked ~ .wrapper {
+    left: 200px;
+}
+
+.nav-trigger + label, .wrapper {
+    transition: left 0.2s;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.navigation li{
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    padding: 15px;
+    border-bottom: .5pt solid #aaa;
+    color: #777;
+}
+
+
+
+p, h1, h2, h3{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+p{
+    line-height: 24px;
+}
+
+h3{
+    color: #555;
+    line-height: 14px;
+}
+
+h2{
+    color: #ccc;
+}
+
+h1.main{
+    color: #555;
+    font-size: 38px;
+    line-height: 36px;
+    margin-top: 100px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p.intro{
+    margin-top: 0;
+    color: #999;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+div.wrapper{
+    margin: 0;
+    background-color: rgb(242,242,237);     
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+    border: .2px solid #ddd;
+}
+
+div.header{
+    min-height: 250px;
+    height: 60%;
+    padding: 4em;
+    background: linear-gradient( rgba(100, 100, 100, 0.7), rgba(0, 0, 0, 0.7) ), url(../images/bokeh_car_lights_bg.jpg);
+    background-size: cover;
+}
+
+.title h1{
+    padding-top: 55px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 34px;
+}
+
+.header h2{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.button{
+    min-width: 220px;
+    font-family: 'Roboto', sans-serif;
+    margin: 15% auto;
+    margin-top: 12px;
+    max-width: 300px;
+    margin-bottom: 68px;
+    height: 48px;
+    border-radius: 60px;
+    text-align: center;
+    color: #eee;
+    font-size: 24px;
+    padding-top: 18px;
+    overflow: hidden;
+}
+
+.sign{
+    min-width: 80px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 12px;
+    max-width: 100px;
+    height: 32px;
+    border-radius: 60px;
+    text-align: center;
+    color: #eee;
+    overflow:hidden;
+    background-color: #fff;
+    padding-top: 15px;
+    border-bottom: .5pt solid #aaa;
+}
+
+.blue{
+    background-color: #3da9ff;
+}
+
+.lightblue{
+    background-color: cyan;
+}
+
+.green{
+    background-color: #66ff99;
+}
+
+.magenta{
+    background-color: #ff9a9a;
+}
+
+.grey{
+    background-color: #333; 
+}
+
+.darkgrey{
+    background-color: #222; 
+}
+
+.section{
+    background-color: #fff;
+    border-radius: 6px;
+    margin-right: 6%;
+    margin-left: 6%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: .2px solid #ddd;
+    padding: 6%;
+}
+
+.circle{
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+}
+
+
+.section h2{
+    color: #999;
+}
+
+.section p{
+    color: #666;
+}
+
+div.staff{
+    margin-left: 0%;
+    margin-right: 0%;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 6%;
+}
+
+.staff p{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.portrait{
+    height: 85px;
+    width: 85px;
+    background-color: #ddd;
+    float: left;
+    border-radius: 50px;
+}
+
+.group{
+    display: inline-block;
+    clear: both;
+    padding: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: 300px;
+    text-align: left;
+}
+
+div.line{
+    width: 80%;
+    margin: 50px auto;
+    border-bottom: 1px solid #ccc;
+}
+
+
+div.form{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 6%;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    margin-top:-1px;
+    margin-bottom: 0;
+}
+
+h1.callToAction{
+    color: #ddd;
+    font-size: 38px;
+    line-height: 36px;
+    margin-top: 100px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p.outro{
+    margin-top: 0;
+    color: #ddd;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.contact input, .contact textarea{
+    border-radius: 4px;
+    border: none;
+    background-color: #eee;
+    min-width: 300px;
+    margin: auto;
+    margin-bottom: 18px;
+    width: 88%;
+    padding: 15px;
+    color: #999;
+    font-size: 18px;
+}
+
+.contact input{
+
+    height: 18px;
+}
+
+.contact textarea{
+    width:88%;
+    height: 160px;
+    display: inline-block;
+}
+
+div.footer{
+    position: absolute;
+    height: 1500px;
+    margin-top: -1px;
+    background-color: #333;
+    padding-left: 6%;
+    bottom: -1500px;
+    right: 0;
+    left: 0;
+}
+
+h3.detail{
+    color: #ddd;
+    text-align: left;
+    font-size: 30px;
+    line-height: 28px;
+}
+
+ul.links{
+    list-style-type: none;
+    list-style: none;
+    padding-left: 0;
+}
+
+.links a{
+   font-family: 'Roboto', sans-serif;
+    color: #aaa;
+    line-height: 28px;
+}
+
+.links a:hover{
+    text-decoration: underline;
+    color: #ccc;
+}
+
+p.credit{
+    color: #888;
+    line-height: 8px;
+    text-align: center;
+    margin: 15% auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.socMed{
+    min-width: 220px;
+    margin: 15% auto;
+    margin-top: 12px;
+    margin-bottom: 50px;
+    max-width: 300px;
+    font-size: 24px;
+    padding-top: 18px;
+    overflow:hidden;
+}
+
+.social{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 18px;
+    margin: 5.5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
